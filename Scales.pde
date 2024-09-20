@@ -9,7 +9,7 @@ void draw(){
         hex_tile(x,y);
       }
       else {
-        shark_teeth(x+5,y+5);
+        hex_tile(x+5,y+5);
       }
      }
      if(shift==true){
