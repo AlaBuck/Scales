@@ -6,10 +6,10 @@ void draw(){
  for(float y = 0;  y <= 500; y+=25){
     for(float x = 0; x<=500; x+=10){
       if(shift==true){
-        hex_tile(x,y);
+        blue_snake(x,y);
       }
       else {
-        hex_tile(x+5,y+5);
+        blue_snake(x+5,y+5);
       }
      }
      if(shift==true){
@@ -20,16 +20,19 @@ void draw(){
  }
   }
 }
-void hex_tile(float x, float y){
-  //head of smiley
-  fill(#836060);
-  //int sideLength = 20;
+void blue_snake(float x, float y){
+  int r = 111+(int)(Math.random()*36);
+  int g = 204+(int)(Math.random()*36);
+  int b = 211+(int)(Math.random()*36);
+  fill(r,g,b);
+  float side_length=20;
+  float root=sqrt(3)/2;
   beginShape();
   vertex(x,y);
-  vertex(x,y+20);
-  vertex(x+10*(sqrt(3)/2),y+30);
-  vertex(x+20*(sqrt(3)/2),y+20);
-  vertex(x+20*(sqrt(3)/2),y);
-  vertex(x+10*(sqrt(3)/2),y-10);
+  vertex(x,y+side_length);
+  vertex(x+10*(root),y+1.5*side_length);
+  vertex(x+20*(root),y+side_length);
+  vertex(x+20*(root),y);
+  vertex(x+10*(root),y-0.5*side_length);
   endShape(CLOSE);
 }
