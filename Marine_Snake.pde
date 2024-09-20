@@ -6,10 +6,10 @@ void draw(){
  for(float y = 0;  y <= 500; y+=25){
     for(float x = 0; x<=500; x+=10){
       if(shift==true){
-        blue_snake(x,y);
+        marine_snake(x,y);
       }
       else {
-        blue_snake(x+5,y+5);
+        marine_snake(x+5,y+5);
       }
      }
      if(shift==true){
@@ -20,7 +20,7 @@ void draw(){
  }
   }
 }
-void blue_snake(float x, float y){
+void marine_snake(float x, float y){
   int r = 111+(int)(Math.random()*111);
   int g = 204+(int)(Math.random()*111);
   int b = 211+(int)(Math.random()*111);
