@@ -32,3 +32,4 @@ void hex_tile(float x, float y){
   vertex(x+10*(sqrt(3)/2),y-10);
   endShape(CLOSE);
 }
+//int sideLength = 20;
