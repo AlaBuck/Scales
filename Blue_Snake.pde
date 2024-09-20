@@ -21,9 +21,9 @@ void draw(){
   }
 }
 void blue_snake(float x, float y){
-  int r = 111+(int)(Math.random()*36);
-  int g = 204+(int)(Math.random()*36);
-  int b = 211+(int)(Math.random()*36);
+  int r = 111+(int)(Math.random()*111);
+  int g = 204+(int)(Math.random()*111);
+  int b = 211+(int)(Math.random()*111);
   fill(r,g,b);
   float side_length=20;
   float root=sqrt(3)/2;
